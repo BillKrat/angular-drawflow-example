@@ -2,9 +2,10 @@ import {  AfterViewInit,  Component,  ElementRef,  Input,  OnChanges,  OnInit,  
 //import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Drawflow from 'drawflow';
 @Component({
-  selector: 'app-drawing-board',
-  templateUrl: './drawing-board.component.html',
-  styleUrls: ['./drawing-board.component.css'],
+    selector: 'app-drawing-board',
+    templateUrl: './drawing-board.component.html',
+    styleUrls: ['./drawing-board.component.css'],
+    standalone: false
 })
 export class DrawingBoardComponent implements OnInit, AfterViewInit, OnChanges {
   @Input()  nodes: any[] =[];

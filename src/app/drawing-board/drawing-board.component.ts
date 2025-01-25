@@ -1,6 +1,7 @@
 import {  AfterViewInit,  Component,  ElementRef,  Input,  OnChanges,  OnInit,  SimpleChanges,  ViewChild,} from '@angular/core';
 //import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Drawflow from 'drawflow';
+import {MatIconModule} from '@angular/material/icon'
 @Component({
     selector: 'app-drawing-board',
     templateUrl: './drawing-board.component.html',
@@ -11,7 +12,7 @@ export class DrawingBoardComponent implements OnInit, AfterViewInit, OnChanges {
   @Input()  nodes: any[] =[];
   @Input()  drawingData: string = "";
   @Input()  locked: boolean = false;
-  @Input()  showLock: boolean = false;
+  @Input()  showLock: boolean = true;
   @Input()  showNodes: boolean = false;
   @Input()  otherDetails: any;
 

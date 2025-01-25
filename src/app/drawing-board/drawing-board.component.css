@@ -1,3 +1,8 @@
+/*  https://stackoverflow.com/questions/47152530/tooltip-issue-mattooltip-not-working-in-angular */
+::ng-deep .cdk-overlay-container {
+  z-index: 9999;
+} 
+
 /* From drawflow > beautiful.css */
 :root {
   --border-color: #cacaca;

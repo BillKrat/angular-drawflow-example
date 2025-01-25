@@ -17,23 +17,29 @@
       </ng-container>
     </div>
     <div class="col-right" [ngStyle]="{ width: showNodes ? '80%' : '100%' }">
-      <div
-        id="drawflow"
+      <div id="drawflow"
         (dragenter)="onDrawflowEvent($event)"
         (dragleave)="onDrawflowEvent($event)"
         (dragover)="onDrawflowEvent($event)"
         (dragend)="onDrawflowEvent($event)"
-        (drop)="onDrawflowEvent($event)"
-      ></div>
-      <div class="btn-clear" (click)="onClear()">Clear</div>
+        (drop)="onDrawflowEvent($event)">
+      </div>
       <div *ngIf="showLock" class="btn-lock" [ngClass]="locked ? 'locked' : ''">
-        <i (click)="changeMode()" class="fas fa-lock-open" [ngStyle]="{ display: locked ? 'none' : 'block' }"></i>
-        <i (click)="changeMode()" class="fas fa-lock" [ngStyle]="{ display: locked ? 'block' : 'none' }"></i>
+        <mat-icon (click)="changeMode()" 
+          matTooltip="Lock drawing board"
+          [ngStyle]="{ display: locked ? 'none' : 'block' }" 
+          fontIcon="lock"></mat-icon>
+        <mat-icon (click)="changeMode()"  
+          matTooltip="Unlock drawing board"
+          [ngStyle]="{ display: locked ? 'block' : 'none' }"
+          fontIcon="lock_open">
+        </mat-icon>
       </div>
       <div class="bar-zoom">
-        <i (click)="onZoomOut()" class="fas fa-search-minus"></i>
-        <i (click)="onZoomReset()" class="fas fa-search"></i>
-        <i (click)="onZoomIn()" class="fas fa-search-plus"></i>
+        <mat-icon (click)="onZoomIn()" matTooltip="Zoom in" fontIcon="zoom_in"></mat-icon>
+        <mat-icon (click)="onZoomReset()" matTooltip="Zoom reset"  fontIcon="settings_backup_restore"></mat-icon>
+        <mat-icon (click)="onZoomOut()" matTooltip="Zoom out" fontIcon="zoom_out"></mat-icon>
+        <mat-icon (click)="onClear()" matTooltip="Clear all" fontIcon="clear_all"></mat-icon>
       </div>
     </div>
   </div>

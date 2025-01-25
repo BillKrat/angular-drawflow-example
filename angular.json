@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-drawflow-example:build:production"
+              "buildTarget": "angular-drawflow-example:build:production"
             },
             "development": {
-              "browserTarget": "angular-drawflow-example:build:development"
+              "buildTarget": "angular-drawflow-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-drawflow-example:build"
+            "buildTarget": "angular-drawflow-example:build"
           }
         },
         "test": {

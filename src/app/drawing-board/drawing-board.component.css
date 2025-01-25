@@ -103,7 +103,7 @@
   right: 150px;
   display: flex;
   color: white;
-  // padding: 5px;
+  /* padding: 5px;*/
   background: transparent;
   border-radius: 4px;
   border: 1px solid rgb(0, 150, 97);
@@ -142,7 +142,7 @@
   bottom: 10px;
   right: 10px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   color: white;
   padding: 5px;
@@ -163,7 +163,7 @@
 
 .bar-zoom i:hover {
   background: rgba(200, 200, 200, 1);
-  // color: rgba(34, 89, 140, 1);
+  /* color: rgba(34, 89, 140, 1);*/
 }
 
 .bar-zoom svg {

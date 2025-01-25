@@ -4,7 +4,7 @@ import Drawflow from 'drawflow';
 @Component({
   selector: 'app-drawing-board',
   templateUrl: './drawing-board.component.html',
-  styleUrls: ['./drawing-board.component.scss'],
+  styleUrls: ['./drawing-board.component.css'],
 })
 export class DrawingBoardComponent implements OnInit, AfterViewInit, OnChanges {
   @Input()  nodes: any[] =[];
